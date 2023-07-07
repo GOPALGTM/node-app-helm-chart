@@ -4,13 +4,11 @@ Simple node.js app that servers "hello world"
 
 Great for testing simple deployments to the cloud
 
-## Run It
+To deploy the project on Kubernetes using kubeadm, you will need to follow these steps on both the master and worker nodes:
 
-# To deploy the project on Kubernetes using kubeadm, you will need to follow these steps on both the master and worker nodes:
+To create a Kubernetes cluster with a master and worker nodes using EC2 instances, first create Two ec2 instances for master and worker nodes.
 
-# To create a Kubernetes cluster with a master and worker nodes using EC2 instances, first create Two ec2 instances for master and worker nodes.
-
-# connect both the nodes and follow this steps:
+connect both the nodes and follow this steps:
 
 ---------------------------------------- Kubeadm Installation ------------------------------------------ 
 
@@ -51,7 +49,7 @@ kubeadm reset pre-flight checks
 
 kubectl get nodes
 
-# install helm
+#install helm
 $ curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 $ chmod 700 get_helm.sh
 $ ./get_helm.sh
@@ -64,6 +62,6 @@ helm install node-app node-app-helm-chart
 
 kubectl get svc
 
-# add NodePort to the security group of the worker node
+#add NodePort to the security group of the worker node
 
-# then go to browser http://workernodepublic-ip:nodeport
+#then go to browser http://workernodepublic-ip:nodeport
