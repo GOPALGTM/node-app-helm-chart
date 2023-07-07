@@ -13,6 +13,7 @@ connect both the nodes and follow this steps:
 ---------------------------------------- Kubeadm Installation ------------------------------------------ 
 
 -------------------------------------- Both Master & Worker Node ---------------------------------------
+
 sudo su
 apt update -y
 apt install docker.io -y
@@ -42,6 +43,8 @@ kubeadm token create --print-join-command
 ------------------------------------------- Worker Node ------------------------------------------------ 
 sudo su
 kubeadm reset pre-flight checks
+
+#add 6447 port on the worker node security group 
 -----> Paste the Join command on worker node and append `--v=5` at end
 
 #To verify cluster connection  
